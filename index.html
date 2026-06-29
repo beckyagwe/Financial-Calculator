@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Old Mutual Savings Calculator — Becky Nguyagwe</title>
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+ 
+  <header>
+    <div class="eyebrow">Old Mutual Kenya</div>
+    <h1>Savings Growth Calculator</h1>
+    <p>See exactly how much your money can grow</p>
+  </header>
+ 
+  <div class="container">
+ 
+    <!-- Plan Selection Tabs -->
+    <div class="plan-tabs">
+      <div class="plan-tab active" id="tab-hakika" onclick="selectPlan('hakika')">Hakika<br>Savings</div>
+      <div class="plan-tab" id="tab-elimika" onclick="selectPlan('elimika')">Elimika<br>Edu Plan</div>
+    </div>
+ 
+    <!-- Plan Description -->
+    <div class="plan-desc" id="plan-desc">
+      Affordable savings plan from KES 3,000/month. Term of 5–15 years. Maturity benefits are guaranteed if all premiums are paid. Includes life cover and optional disability rider.
+    </div>
+
+    <!-- Payment Frequency Card -->
+    <div class="card">
+      <label>Payment Frequency</label>
+      <div class="freq-tabs">
+        <div class="freq-tab active" id="freq-12" onclick="selectFrequency(12)">Monthly</div>
+        <div class="freq-tab" id="freq-4" onclick="selectFrequency(4)">Quarterly</div>
+        <div class="freq-tab" id="freq-2" onclick="selectFrequency(2)">Half-Yearly</div>
+        <div class="freq-tab" id="freq-1" onclick="selectFrequency(1)">Annually</div>
+      </div>
+    </div>
+ 
+    <!-- Contribution Amount Card with Validation Layout -->
+    <div class="card">
+      <label id="contribution-label">Monthly contribution</label>
+      <div class="input-row">
+        <span class="prefix">KES</span>
+        <input type="number" id="premium" value="5000" oninput="calc()" placeholder="Enter amount">
+        <span class="val-badge hint-badge" id="premium-min-hint">Min: 3,000</span>
+      </div>
+      <!-- Error Message Container -->
+      <div class="error-msg" id="premium-error"></div>
+    </div>
+ 
+    <!-- Savings Term Card -->
+    <div class="card">
+      <label>Savings term</label>
+      <div class="input-row">
+        <input type="range" id="term" min="5" max="15" step="1" value="10" oninput="calc()">
+        <span class="val-badge" id="term-val">10 yrs</span>
+      </div>
+    </div>
+ 
+    <!-- Results Card -->
+    <div class="results-card">
+      <div class="label">Your estimated maturity value</div>
+      <div class="big-number" id="maturity-val">Guaranteed Payout</div>
+      <div class="sub" id="maturity-sub">Benefits are fixed at the outset for your plan.</div>
+      <div class="results-grid">
+        <div class="result-item">
+          <div class="r-label">Total paid in</div>
+          <div class="r-val" id="total-paid">KES 0</div>
+        </div>
+        <div class="result-item">
+          <div class="r-label">Your gain</div>
+          <div class="r-val" id="gain-val">See official quote</div>
+        </div>
+        <div class="result-item">
+          <div class="r-label">Life Cover & Riders</div>
+          <div class="r-val" id="life-cover">Included</div>
+        </div>
+        <div class="result-item">
+          <div class="r-label">Tax relief/period</div>
+          <div class="r-val" id="tax-relief">KES 0</div>
+        </div>
+      </div>
+      <div class="tax-note" id="tax-note"></div>
+    </div>
+ 
+    <!-- Plan Highlights Card -->
+    <div class="card" id="features-card">
+      <label>Plan highlights</label>
+      <ul class="features-list" id="features-list"></ul>
+    </div>
+ 
+    <!-- Call To Action Section -->
+    <div class="cta-section">
+      <a id="wa-btn" href="#" class="cta-btn" onclick="openWA(event)">
+        Chat with me on WhatsApp
+      </a>
+      <p class="cta-sub">
+        I'll create a <span>personalised savings plan</span> for your exact goal —<br>school fees, emergency fund, or retirement.
+      </p>
+    </div>
+ 
+    <p class="disclaimer">
+      *Maturity benefits, life cover sums, and rider protections are guaranteed if all premiums are paid to maturity, and are calculated explicitly at the outset by Old Mutual based on your profile. This calculator provides structural tracking and tax guidelines based strictly on your brochure definitions. Speak to Becky for a formal, personalized illustration contract.<br><br>
+      Rebecca Nguyagwe | Old Mutual Kenya — Kimathi Branch
+    </p>
+ 
+  </div>
+ 
+  <script src="script.js"></script>
+</body>
+</html>>
