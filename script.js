@@ -2,8 +2,8 @@ const YOUR_WHATSAPP = "254742924045";
 
 const plans = {
   hakika: {
-    desc: "Affordable savings plan from KES 3,000/month. Term of 5–15 years. Maturity benefits are guaranteed if all premiums are paid. Includes life cover and optional disability rider.",
-    minPremiumMonthly: 3000,
+    desc: "Affordable savings plan from KES 5,000/month. Term of 5–15 years. Maturity benefits are guaranteed if all premiums are paid. Includes life cover and optional disability rider.",
+    minPremiumMonthly: 5000,
     maxTerm: 15,
     minTerm: 5,
     features: [
@@ -17,8 +17,8 @@ const plans = {
     featureTypes: ["","","","","","warning"]
   },
   elimika: {
-    desc: "School fees plan from KES 3,000/month. Term of 5–15 years. Pays out in a series of payments to cater for your child's school fees. Includes life cover and optional riders.",
-    minPremiumMonthly: 3000,
+    desc: "School fees plan from KES 5,000/month. Term of 5–15 years. Pays out in a series of payments to cater for your child's school fees. Includes life cover and optional riders.",
+    minPremiumMonthly: 5000,
     maxTerm: 15,
     minTerm: 5,
     features: [
